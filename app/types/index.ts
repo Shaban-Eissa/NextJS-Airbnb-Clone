@@ -1,5 +1,13 @@
 import { Listing, Reservation, User } from "@prisma/client";
-import { list } from "postcss";
+
+export type SafeUser = Omit<
+  User,
+  "emailVerified" | "createdAt" | "updatedAt"
+> & {
+  emailVerified: string | null;
+  createdAt: string;
+  updatedAt: string;
+};
 
 export type SafeListing = Omit<Listing, "createdAt"> & {
   createdAt: string;
@@ -13,13 +21,4 @@ export type SafeReservation = Omit<
   startDate: string;
   endDate: string;
   listing: SafeListing;
-};
-
-export type SafeUser = Omit<
-  User,
-  "emailVerified" | "createdAt" | "updatedAt"
-> & {
-  emailVerified: string | null;
-  createdAt: string;
-  updatedAt: string;
 };
