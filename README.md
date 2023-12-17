@@ -30,7 +30,7 @@ A clone of Airbnb built with Next.js, React, and other technologies.
 
 <img src="https://github.com/Shaban-Eissa/NextJS-Airbnb-Clone/assets/49924090/9ef7561b-37fc-4209-8cae-93c452b8dc93" width="900" height="400" />
 
-Check out the live demo [here](#)
+Check out the live demo https://next-js-airbnb-clone-rho.vercel.app
 
 ## Installation
 
